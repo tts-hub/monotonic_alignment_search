@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: CC0-1.0
 
 include README.md
-include LICENSE
 recursive-include LICENSES *.txt
 recursive-include src *.py
 recursive-include src *.pyx
