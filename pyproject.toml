@@ -14,7 +14,8 @@ maintainers = [
     { name = "Enno Hermann", email = "enno.hermann@gmail.com" }
 ]
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSES/*.txt", "REUSE.toml"]
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -29,7 +30,6 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
-    "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Multimedia :: Sound/Audio :: Speech",
 ]
