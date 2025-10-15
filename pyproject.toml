@@ -13,16 +13,16 @@ authors = [
 maintainers = [
     { name = "Enno Hermann", email = "enno.hermann@gmail.com" }
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = {text = "MIT"}
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
@@ -84,11 +84,11 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "coverage>=7.6.4",
-    "mypy>=1.13.0",
+    "mypy==1.18.2",
     "pre-commit>=4.0.1",
     "pytest>=8.3.3",
-    "reuse>=4.0.3",
-    "ruff==0.11.10",
+    "reuse>=6",
+    "ruff==0.14.0",
 ]
 
 [tool.ruff.lint]
