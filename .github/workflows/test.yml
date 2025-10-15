@@ -17,9 +17,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - python-version: "3.9"
-            numpy-version: "numpy==1.21.6"
-            torch-version: "torch==1.12.1"
           - python-version: "3.10"
             numpy-version: "numpy==1.21.6"
             torch-version: "torch==1.12.1"
@@ -30,8 +27,11 @@ jobs:
             numpy-version: "numpy==1.26.4"
             torch-version: "torch==2.2.2"
           - python-version: "3.13"
+            numpy-version: "numpy==2.1.0"
+            torch-version: "torch==2.6.0"
+          - python-version: "3.14"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup uv
         uses: ./.github/actions/setup-uv
       - name: Tests
@@ -53,16 +53,16 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup uv
         uses: ./.github/actions/setup-uv
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           pattern: coverage-data-*
           merge-multiple: true
       - name: Combine coverage
         run: |
-          uv python install 3.12
+          uv python install 3.14
           uvx coverage combine
           uvx coverage html --skip-covered --skip-empty
           uvx coverage report --format=markdown >> $GITHUB_STEP_SUMMARY
