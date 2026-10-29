@@ -85,7 +85,7 @@ build-backend = "setuptools.build_meta"
 dev = [
     "coverage>=7.6.4",
     "mypy==1.18.2",
-    "pre-commit>=4.0.1",
+    "prek>=0.5",
     "pytest>=8.3.3",
     "reuse>=6",
     "ruff==0.14.0",

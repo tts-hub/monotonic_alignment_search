@@ -18,6 +18,6 @@ jobs:
       - name: Setup uv
         uses: ./.github/actions/setup-uv
       - name: Lint check
-        run: uv run --only-dev pre-commit run --all-files
+        run: uv run --only-dev prek run --all-files
       - name: Mypy
         run: uv run --extra cpu mypy --strict src/
