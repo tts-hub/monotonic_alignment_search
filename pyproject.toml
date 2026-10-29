@@ -13,17 +13,17 @@ authors = [
 maintainers = [
     { name = "Enno Hermann", email = "enno.hermann@gmail.com" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSES/*.txt", "REUSE.toml"]
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
@@ -34,15 +34,15 @@ classifiers = [
     "Topic :: Multimedia :: Sound/Audio :: Speech",
 ]
 dependencies = [
-    "numpy>=1.21.6",
+    "numpy>=1.23.2",
 ]
 
 [project.optional-dependencies]
 cpu = [
-    "torch>=1.12.1",
+    "torch>=1.13.0",
 ]
 cuda = [
-    "torch>=1.12.1",
+    "torch>=1.13.0",
 ]
 
 [tool.uv]
