@@ -84,11 +84,11 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "coverage>=7.6.4",
-    "mypy==1.18.2",
     "prek>=0.5",
     "pytest>=9",
     "reuse>=6",
     "ruff==0.17.3",
+    "ty==0.0.94",
 ]
 
 [tool.ruff.lint]
@@ -104,6 +104,9 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"
+
+[tool.ty.src]
+exclude = ["setup.py", ".github/"]
 
 [tool.coverage.report]
 show_missing = true
