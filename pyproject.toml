@@ -4,7 +4,7 @@
 
 [project]
 name = "monotonic-alignment-search"
-version = "0.2.1"
+version = "0.2.2"
 description = "Monotonically align text and speech"
 readme = "README.md"
 authors = [
