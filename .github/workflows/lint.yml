@@ -19,5 +19,7 @@ jobs:
         uses: ./.github/actions/setup-uv
       - name: Lint check
         run: uv run --only-dev prek run --all-files
-      - name: Mypy
-        run: uv run --extra cpu mypy --strict src/
+        env:
+          SKIP: ty
+      - name: Type check
+        run: uv run --extra cpu ty check
