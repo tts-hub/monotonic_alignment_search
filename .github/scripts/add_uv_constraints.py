@@ -16,10 +16,10 @@ $ .github/scripts/add_uv_constraints.py numpy==1.26.4 torch==2.2.2
 """
 
 import sys
+import tomllib
 from pathlib import Path
 
 import tomli_w
-import tomllib
 
 with Path("pyproject.toml").open("rb") as f:
     toml = tomllib.load(f)

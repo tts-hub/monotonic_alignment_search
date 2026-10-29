@@ -22,4 +22,4 @@ def test_mas() -> None:
     value = torch.rand((1, 20, 40))
     mask = torch.ones_like(value)
     with pytest.raises(NotImplementedError):
-        maximum_path(value, mask, "INVALID")  # type: ignore[arg-type]
+        maximum_path(value, mask, "INVALID")  # ty: ignore[invalid-argument-type]
