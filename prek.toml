@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2026 Enno Hermann
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+  { id = "check-added-large-files" },
+  { id = "check-toml" },
+  { id = "end-of-file-fixer" },
+  { id = "trailing-whitespace" },
+]
+
+[[repos]]
+repo = "https://github.com/astral-sh/ruff-pre-commit"
+rev = "v0.14.0"
+hooks = [
+  { id = "ruff-check" },
+  { id = "ruff-format" }
+]
+
+[[repos]]
+repo = "https://github.com/fsfe/reuse-tool"
+rev = "d6a8b11c3662ade803dcd3e585d49b78524e8bd5"
+hooks = [
+  { id = "reuse-lint-file" }
+]
